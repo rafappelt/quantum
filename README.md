@@ -2,8 +2,9 @@
 O objetivo desse projeto é demonstrar a capacidade de implementação de um projeto de front-end.
 
 ## Proposta
-Implementar uma arquitetura de um projeto client-side utilizando boas práticas de programação.
+Implementar um projeto client-side utilizando boas práticas de programação.
 
+###Requisitos
 1. Fazer uma chamada a uma API REST.
 2. Exibir um gráfico em linha com a informação obtida no REST utilizando SVG do HTML5 sem a utilização de nenhuma biblioteca gráfica.
 3. Utilizar SCSS no projeto.
