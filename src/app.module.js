@@ -5,10 +5,10 @@
 		.module('app',['ngRoute','ngCookies','app.data','app.widget','app.view'])
 		.constant("CONFIG", (function(){
 			return{
-				"title": "Desafio Quantum" 
+				"title": "Desafio Quantum",
+				"restRoot": "/rest" 
 			};
 		})());
-
     
 })();
 

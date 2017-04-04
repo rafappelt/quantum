@@ -5,23 +5,23 @@
     .module('app.data')
     .factory('currencyService', CurrencyService);
 
-	CurrencyService.$inject = ['$http'];
+	CurrencyService.$inject = ['$http','CONFIG'];
 
-	function CurrencyService($http) {
+	function CurrencyService($http,CONFIG) {
 		return {
-			getCurrencys: getCurrencys
+			getCurrency: getCurrency
 		};
 
-		function getCurrencys(from, to) {
-			return $http.get('https://www.google.com/finance/info?q=CURRENCY:'+from+to)
-				.then(getCurrencysComplete)
-				.catch(getCurrencysFailed);
+		function getCurrency(from, to) {
+			return $http.get(CONFIG.restRoot+'/currency.php?from='+from+'&to='+to)
+				.then(getCurrencyComplete)
+				.catch(getCurrencyFailed);
 
-			function getCurrencysComplete(response) {
+			function getCurrencyComplete(response) {
 				return response.data.results;
 			}
 
-			function getCurrencysFailed(error) {
+			function getCurrencyFailed(error) {
 				//logger.error('XHR Failed for getCurrency.' + error.data);
 				
 				// Hard coded result for local test purpose

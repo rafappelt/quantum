@@ -1,0 +1,9 @@
+<div ng-controller="HistoricalController as hist">
+	<div class="full">
+		<svg chart  viewBox="0 0 100 100" preserveAspectRatio="none">
+			<circle ng-repeat="h in hist.data track by $index" r="0.5" data-x="{{$index}}" data-y="{{h.close}}">
+				<title>[{{h.date}}] Open:{{h.open}} High:{{h.high}} Low:{{h.low}} Close:{{h.close}} Volume:{{h.volume}} </title>
+			</circle>
+		</svg>
+	</div>
+</div>

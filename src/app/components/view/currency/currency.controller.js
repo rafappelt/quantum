@@ -3,15 +3,14 @@
     
 	angular
 		.module('app.view')
-		.controller('HistoricalController', HistoricalController);
+		.controller('CurrencyController', CurrencyController);
 	
-	HistoricalController.$inject = ['stockService'];
+	CurrencyController.$inject = ['currencyService'];
 	
-	function HistoricalController(stockService) {
+	function CurrencyController(currencyService) {
 		var vm = this;
 		vm.data = [];
 		vm.getData = getData;
-		vm.market = "INDEXBVMF:IBOV";//NASDAQ:NDAQ
 
 		activate();
 
@@ -22,15 +21,10 @@
 		}
 
 		function getData() {
-			return stockService.getStocks(vm.market).then(function(data) {
+			return currencyService.getCurrency("EUR","BRL").then(function(data) {
 				vm.data = data;
 				return vm.data;
 			});
-		}
-		
-		function setMarket(m) {
-			alert(m);
-			vm.market = m;
 		}
 	}
 	

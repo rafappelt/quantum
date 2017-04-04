@@ -7,35 +7,21 @@
 	<title>Desafio Quantum</title>
 	<base target="_blank" href="./"/>
 	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
-	
-	<style>
-		body, html { border:0; margin: 0; padding: 0; width: 100%; height: 100%; }
-		
-		svg{ 
-			display: block;
-			border: solid black 3px;
-			width: 50vw;
-			height: 50vh;
-			margin: auto;
-		}
-	</style>
-  
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
 </head>
 <body ng-app="app">
 
-	<img src="assets/img/quantum.jpg"/>
+	<header>
+		<img class="logo" src="assets/img/quantum.jpg"/>
+		<nav sidebar>
+		</nav>
+	</header>
 	
-	<svg chart ng-controller="HomeController as home">
-		<text ng-repeat="currency in home.data track by $index" fill="#000" font-size="20" font-size-adjust: 0.58; font-family="Verdana" x="50%" y="50%">{{currency.t}} - {{currency.l}}</text>
-	</svg>
 	
-	<ul chart ng-controller="HistoricalController as hist">
-		<li ng-repeat="h in hist.data track by $index" >{{h}}</li>
-	</ul>
-	
-	<div chart ng-controller="HistoricalController as hist">
-		{{hist.data}}
-	</div>
+	<section>
+		<div ng-view>
+		</div>
+	</section>
 	
 	<!-- Libs -->
 	<script src="assets/libs/jquery-1.11.3.min.js"></script>
@@ -49,8 +35,13 @@
 	<script src="app/shared/widget/app.widget.module.js"></script>
 	<script src="app/components/view/app.view.module.js"></script>
 	
-	<!-- Directives -->
+	<!-- Routing -->
+	<script src="app.routes.js"></script>
+	
+	<!-- Widgets -->
 	<script src="app/shared/widget/chart/chart.directive.js"></script>
+	<script src="app/shared/widget/sidebar/sidebar.directive.js"></script>
+	<script src="app/shared/widget/sidebar/sidebar.controller.js"></script>
 	
 	<!-- Data Services -->
 	<script src="app/shared/data/currency/currency.service.js"></script>
@@ -59,6 +50,7 @@
 	<!-- Views -->
 	<script src="app/components/view/home/home.controller.js"></script>
 	<script src="app/components/view/historical/historical.controller.js"></script>
+	<script src="app/components/view/currency/currency.controller.js"></script>
 
 </body>
 </html>

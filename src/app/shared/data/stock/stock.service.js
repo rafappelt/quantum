@@ -5,18 +5,15 @@
     .module('app.data')
     .factory('stockService', StockService);
 
-	StockService.$inject = ['$http'];
+	StockService.$inject = ['$http','CONFIG'];
 
-	function StockService($http) {
+	function StockService($http, CONFIG) {
 		return {
 			getStocks: getStocks
 		};
 
 		function getStocks(q) {
-			return $http.get(
-				//'https://www.google.com/finance/historical?q='+q+"&output=csv"
-				'assets/csv/ibov.csv'
-				)
+			return $http.get( CONFIG.restRoot+'/historical.php?q='+q)
 				.then(getStocksComplete)
 				.catch(getStocksFailed);
 
@@ -27,19 +24,19 @@
 				lines.forEach(function(e){
 					var values = e.split(",");
 					var eJSON = {};
-					header.forEach(function(key, i){
-						eJSON[key] = values[i];
-					});
-					result.push(eJSON);
+					if( values.length && values[0] ){
+						header.forEach(function(key, i){
+							eJSON[key.toLowerCase()] = values[i];
+						});
+						result.push(eJSON);
+					}
 				});
 				return result;
 			}
 
 			function getStocksFailed(error) {
 				//logger.error('XHR Failed for getStock.' + error.data);
-				
-				// Hard coded result for local test purpose
-				return [{name:"ACAO1",val:100},{name:"ACAO2",val:200}];
+				console.log('XHR Failed for getStock.' + error.data);
 			}
 		}
 	}
