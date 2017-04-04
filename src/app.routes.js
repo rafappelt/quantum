@@ -27,7 +27,7 @@
                     title: 'Home',
                     settings: {
                         nav: 1,
-                        content: 'Home'
+                        content: 'Sobre'
                     }
                 }
             }, {

@@ -6,7 +6,7 @@
 		.constant("CONFIG", (function(){
 			return{
 				"title": "Desafio Quantum",
-				"restRoot": "/rest" 
+				"restRoot": "rest" 
 			};
 		})());
     
