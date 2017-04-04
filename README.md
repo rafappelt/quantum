@@ -1,17 +1,18 @@
 # Desafio Quantum
-O objetivo desse projeto é demonstrar a capacidade de implementação de um pequeno projeto de front-end.
+O objetivo desse projeto é demonstrar a capacidade de implementação de um projeto de front-end.
 
 ## Proposta
 Implementar uma arquitetura de um projeto client-side utilizando boas práticas de programação.
 
 1. Fazer uma chamada a uma API REST.
-2. Exibir um gráfico em linha com a informação obtida no REST sem a utilização de nenhuma biblioteca gráfica.
+2. Exibir um gráfico em linha com a informação obtida no REST utilizando SVG do HTML5 sem a utilização de nenhuma biblioteca gráfica.
 3. Utilizar SCSS no projeto.
 4. Utilizar um framework JS como Knockout, Ember, Angular ou React.js.
 
 # Solução
+
 ## Tecnologias Utilizadas
-* Angular
+* Angular.js
 * HTML5
 * SCSS
 
