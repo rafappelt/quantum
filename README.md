@@ -6,7 +6,7 @@ Implementar um projeto client-side utilizando boas práticas de programação.
 
 ### Requisitos
 1. Fazer uma chamada a uma API REST.
-2. Exibir um gráfico de linha com a informação obtida no REST utilizando SVG do HTML5 sem a reutilização de nenhuma biblioteca gráfica.
+2. Exibir um gráfico de linha com a informação obtida no REST utilizando SVG do HTML5 sem a inclusão de nenhuma biblioteca gráfica.
 3. Utilizar SCSS no projeto.
 4. Utilizar um framework JS como Knockout, Ember, Angular ou React.js.
 
