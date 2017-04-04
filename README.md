@@ -27,6 +27,5 @@ Por questões de limitação de tempo foram deixado de lado alguns aspectos impo
 
 ### Javascript
 Por questões de garantia de compatibilidade, foi utilizado o ECMAScript 5.
-O uso do ECMAScript 6 pode ser avaliado futuramente pela equipe técnica pois
-é fortemente recomendado devido aos avanços em robustez, simplicidade, legibilidade 
-e verbosidade.
+O uso do ECMAScript 6 pode ser avaliado futuramente pela equipe técnica devido
+aos avanços em robustez, simplicidade, legibilidade e verbosidade.
