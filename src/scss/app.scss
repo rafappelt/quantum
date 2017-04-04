@@ -8,31 +8,50 @@ header{
 	top: 20px;
 	left:10px;
 	z-index: 20;
+	
+	.logo{
+	
+	}
+	
+	[sidebar]{
+	
+		ul{
+			margin: 0; 
+			text-align: left; 
+			padding: 0;
+			
+			li{ 
+				display: inline-block; 
+				color: black;
+				
+				a{ 
+					color: black; 
+					margin:0.4em; 
+					cursor: pointer; 
+				}
+			 }
+		}
+	}
 }
-		
-.logo{
-}
-
-[sidebar] ul{ margin: 0; text-align: left; padding: 0; }
-[sidebar] ul li{ display: inline-block; color: black; }
-[sidebar] ul li a{ color: black; margin:0.4em; cursor: pointer; }
-
+	
 section {
 	margin-top: 140px;
     margin-left: 1em;
+    
+    .full{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		z-index: 1;
+	}
 }
 
-.full{
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	max-width: 100%;
-	z-index: 1;
-}
+
 
 svg{ 
 	display: block;
@@ -40,20 +59,18 @@ svg{
 	height: 100%;
 	margin: auto;
 	z-index: -1;
-}
-
-svg circle{
-	fill: transparent;
-}
-svg circle:hover{
-	fill: black;
-}
-
-svg path{
-	stroke: #ccc;
-	stroke-width: 0.4;
-}
-
-circle {
-	cursor: pointer;
+	
+	circle{
+		cursor: pointer;
+		fill: transparent;
+		
+		&:hover{
+			fill: black;
+		}
+	}
+	
+	path{
+		stroke: #ccc;
+		stroke-width: 0.4;
+	}
 }
