@@ -6,6 +6,8 @@
 	<meta charset="ISO-8859-1" />
 	<title>Desafio Quantum</title>
 	<base target="_blank" href="./"/>
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+	
 	<style>
 		body, html { border:0; margin: 0; padding: 0; width: 100%; height: 100%; }
 		
@@ -30,6 +32,10 @@
 	<ul chart ng-controller="HistoricalController as hist">
 		<li ng-repeat="h in hist.data track by $index" >{{h}}</li>
 	</ul>
+	
+	<div chart ng-controller="HistoricalController as hist">
+		{{hist.data}}
+	</div>
 	
 	<!-- Libs -->
 	<script src="assets/libs/jquery-1.11.3.min.js"></script>

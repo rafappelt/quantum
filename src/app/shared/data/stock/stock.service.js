@@ -13,12 +13,26 @@
 		};
 
 		function getStocks(q) {
-			return $http.get('https://www.google.com/finance/historical?q='+q+"&output=csv")
+			return $http.get(
+				//'https://www.google.com/finance/historical?q='+q+"&output=csv"
+				'assets/csv/ibov.csv'
+				)
 				.then(getStocksComplete)
 				.catch(getStocksFailed);
 
 			function getStocksComplete(response) {
-				return response.data.results;
+				var lines = response.data.split("\n");
+				var header = lines.shift().split(",");
+				var result = [];
+				lines.forEach(function(e){
+					var values = e.split(",");
+					var eJSON = {};
+					header.forEach(function(key, i){
+						eJSON[key] = values[i];
+					});
+					result.push(eJSON);
+				});
+				return result;
 			}
 
 			function getStocksFailed(error) {
