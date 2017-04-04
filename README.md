@@ -12,6 +12,7 @@ Implementar um projeto client-side utilizando boas práticas de programação.
 
 ## Solução
 Foi implementado um gráfico linear em SVG com os valores de fechamento da Bolsa de Valores Ibovespa do último ano.
+
 Os dados estão sendo obtidos através de um serviço do Google Finance.
 
 ### Principais Tecnologias Utilizadas
@@ -27,5 +28,6 @@ Por questões de limitação de tempo foram deixado de lado alguns aspectos impo
 
 ### Javascript
 Para garantir a compatibilidade, foi utilizado o ECMAScript 5.
+
 O uso do ECMAScript 6 pode ser avaliado futuramente pela equipe técnica devido
 aos avanços em robustez, simplicidade, legibilidade e verbosidade.
