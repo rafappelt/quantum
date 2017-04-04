@@ -17,7 +17,7 @@
 
 		function activate() {
 			return getData().then(function() {
-				//logger.info('Activated Home View');
+				console.log('Activated Home View');
 			});
 		}
 

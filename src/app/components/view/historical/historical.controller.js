@@ -17,7 +17,7 @@
 
 		function activate() {
 			return getData().then(function() {
-				//logger.info('Activated Historical View');
+				console.log('Activated Historical View');
 			});
 		}
 

@@ -35,7 +35,6 @@
 			}
 
 			function getStocksFailed(error) {
-				//logger.error('XHR Failed for getStock.' + error.data);
 				console.log('XHR Failed for getStock.' + error.data);
 			}
 		}
