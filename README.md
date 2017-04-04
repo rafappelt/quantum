@@ -26,6 +26,6 @@ Por questões de limitação de tempo foram deixado de lado alguns aspectos impo
 * Tarefas de Build Automatizadas
 
 ### Javascript
-Por questões de garantia de compatibilidade, foi utilizado o ECMAScript 5.
+Para garantir a compatibilidade, foi utilizado o ECMAScript 5.
 O uso do ECMAScript 6 pode ser avaliado futuramente pela equipe técnica devido
 aos avanços em robustez, simplicidade, legibilidade e verbosidade.
